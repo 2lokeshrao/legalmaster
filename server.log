@@ -804,3 +804,117 @@ prisma:query SELECT "public"."Agreement"."id", "public"."Agreement"."userId", "p
  ✓ Compiled in 230ms
  ✓ Compiled middleware in 1ms
  ✓ Compiled middleware in 1ms
+ GET /login 200 in 730ms
+ GET / 200 in 167ms
+ GET / 200 in 168ms
+ GET / 200 in 139ms
+ GET / 200 in 142ms
+ GET / 200 in 137ms
+ GET / 200 in 122ms
+prisma:query SELECT "public"."Agreement"."id", "public"."Agreement"."userId", "public"."Agreement"."templateId", "public"."Agreement"."status", "public"."Agreement"."formData", "public"."Agreement"."isLocked", "public"."Agreement"."createdAt", "public"."Agreement"."updatedAt" FROM "public"."Agreement" WHERE "public"."Agreement"."userId" = $1 ORDER BY "public"."Agreement"."createdAt" DESC OFFSET $2
+ GET /dashboard 200 in 459ms
+prisma:query SELECT "public"."Agreement"."id", "public"."Agreement"."userId", "public"."Agreement"."templateId", "public"."Agreement"."status", "public"."Agreement"."formData", "public"."Agreement"."isLocked", "public"."Agreement"."createdAt", "public"."Agreement"."updatedAt" FROM "public"."Agreement" WHERE "public"."Agreement"."userId" = $1 ORDER BY "public"."Agreement"."createdAt" DESC OFFSET $2
+ GET /dashboard 200 in 198ms
+prisma:query SELECT "public"."Agreement"."id", "public"."Agreement"."userId", "public"."Agreement"."templateId", "public"."Agreement"."status", "public"."Agreement"."formData", "public"."Agreement"."isLocked", "public"."Agreement"."createdAt", "public"."Agreement"."updatedAt" FROM "public"."Agreement" WHERE "public"."Agreement"."userId" = $1 ORDER BY "public"."Agreement"."createdAt" DESC OFFSET $2
+ GET /dashboard 200 in 220ms
+ GET /dashboard/create 200 in 177ms
+ ⨯ Error [PrismaClientValidationError]: 
+Invalid `__TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$db$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["prisma"].template.findMany()` invocation in
+/home/code/legal-master/.next/server/chunks/ssr/[root-of-the-server]__ba9ebfe9._.js:168:154
+
+  165 ;
+  166 async function CategoryTemplatesPage({ params }) {
+  167     const { categoryId } = await params;
+→ 168     const templates = await __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$db$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["prisma"].template.findMany({
+            where: {
+              categoryId: "real-estate",
+              ~~~~~~~~~~
+          ?   AND?: TemplateWhereInput | TemplateWhereInput[],
+          ?   OR?: TemplateWhereInput[],
+          ?   NOT?: TemplateWhereInput | TemplateWhereInput[],
+          ?   id?: StringFilter | String,
+          ?   title?: StringFilter | String,
+          ?   description?: StringFilter | String,
+          ?   price?: FloatFilter | Float,
+          ?   requirementsText?: StringFilter | String,
+          ?   formSchemaJson?: JsonFilter,
+          ?   agreements?: AgreementListRelationFilter
+            }
+          })
+
+Unknown argument `categoryId`. Available options are marked with ?.
+    at <unknown> (app/dashboard/create/[categoryId]/page.tsx:10:43)
+    at async CategoryTemplatesPage (app/dashboard/create/[categoryId]/page.tsx:10:21)
+   8 |   const { categoryId } = await params;
+   9 |   
+> 10 |   const templates = await prisma.template.findMany({
+     |                                           ^
+  11 |     where: { categoryId: categoryId }
+  12 |   });
+  13 | {
+  clientVersion: '6.2.1',
+  digest: '260622053'
+}
+ GET /dashboard/create/real-estate 200 in 192ms
+ GET /favicon.ico 200 in 371ms
+ GET /signup 200 in 406ms
+ GET /login 200 in 154ms
+prisma:query SELECT "public"."User"."id", "public"."User"."name", "public"."User"."email", "public"."User"."mobile", "public"."User"."passwordHash", "public"."User"."createdAt" FROM "public"."User" WHERE ("public"."User"."email" = $1 AND 1=1) LIMIT $2 OFFSET $3
+ POST /api/auth/login 401 in 460ms
+ GET / 200 in 172ms
+ GET / 200 in 123ms
+ GET / 200 in 470ms
+ GET /signup 200 in 185ms
+ GET /login 200 in 118ms
+prisma:query SELECT 1
+prisma:query SELECT "public"."User"."id", "public"."User"."name", "public"."User"."email", "public"."User"."mobile", "public"."User"."passwordHash", "public"."User"."createdAt" FROM "public"."User" WHERE ("public"."User"."email" = $1 AND 1=1) LIMIT $2 OFFSET $3
+ POST /api/auth/login 401 in 436ms
+ GET / 200 in 166ms
+ GET / 200 in 405ms
+ GET / 200 in 129ms
+ GET / 200 in 135ms
+prisma:query SELECT "public"."Agreement"."id", "public"."Agreement"."userId", "public"."Agreement"."templateId", "public"."Agreement"."status", "public"."Agreement"."formData", "public"."Agreement"."isLocked", "public"."Agreement"."createdAt", "public"."Agreement"."updatedAt" FROM "public"."Agreement" WHERE "public"."Agreement"."userId" = $1 ORDER BY "public"."Agreement"."createdAt" DESC OFFSET $2
+ GET /dashboard 200 in 318ms
+ GET /dashboard/create 200 in 194ms
+ ⨯ Error [PrismaClientValidationError]: 
+Invalid `__TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$db$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["prisma"].template.findMany()` invocation in
+/home/code/legal-master/.next/server/chunks/ssr/[root-of-the-server]__ba9ebfe9._.js:168:154
+
+  165 ;
+  166 async function CategoryTemplatesPage({ params }) {
+  167     const { categoryId } = await params;
+→ 168     const templates = await __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$db$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["prisma"].template.findMany({
+            where: {
+              categoryId: "real-estate",
+              ~~~~~~~~~~
+          ?   AND?: TemplateWhereInput | TemplateWhereInput[],
+          ?   OR?: TemplateWhereInput[],
+          ?   NOT?: TemplateWhereInput | TemplateWhereInput[],
+          ?   id?: StringFilter | String,
+          ?   title?: StringFilter | String,
+          ?   description?: StringFilter | String,
+          ?   price?: FloatFilter | Float,
+          ?   requirementsText?: StringFilter | String,
+          ?   formSchemaJson?: JsonFilter,
+          ?   agreements?: AgreementListRelationFilter
+            }
+          })
+
+Unknown argument `categoryId`. Available options are marked with ?.
+    at <unknown> (app/dashboard/create/[categoryId]/page.tsx:10:43)
+    at async CategoryTemplatesPage (app/dashboard/create/[categoryId]/page.tsx:10:21)
+   8 |   const { categoryId } = await params;
+   9 |   
+> 10 |   const templates = await prisma.template.findMany({
+     |                                           ^
+  11 |     where: { categoryId: categoryId }
+  12 |   });
+  13 | {
+  clientVersion: '6.2.1',
+  digest: '260622053'
+}
+ GET /dashboard/create/real-estate 200 in 352ms
+ GET /favicon.ico 200 in 297ms
+ GET / 200 in 327ms
+ GET / 200 in 138ms
+ GET / 200 in 262ms
