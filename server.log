@@ -1,0 +1,797 @@
+$ next dev --turbopack
+   ▲ Next.js 15.5.6 (Turbopack)
+   - Local:        http://localhost:3000
+   - Network:      http://169.254.0.21:3000
+
+ ✓ Starting...
+Attention: Next.js now collects completely anonymous telemetry regarding usage.
+This information is used to shape Next.js' roadmap and prioritize features.
+You can learn more, including how to opt-out if you'd not like to participate in this anonymous program, by visiting the following URL:
+https://nextjs.org/telemetry
+
+ ✓ Ready in 1813ms
+   Reload env: .env
+   Reload env: .env
+ ✓ Compiled in 57ms
+ ✓ Compiled middleware in 444ms
+ ○ Compiling / ...
+ ✓ Compiled / in 5.3s
+ GET / 200 in 6429ms
+ ⚠ Cross origin request detected from shaky-files-march.lindy.site to /_next/* resource. In a future major version of Next.js, you will need to explicitly configure "allowedDevOrigins" in next.config to allow this.
+Read more: https://nextjs.org/docs/app/api-reference/config/next-config-js/allowedDevOrigins
+ GET / 200 in 230ms
+ GET / 200 in 176ms
+ GET / 200 in 177ms
+ GET / 200 in 158ms
+ GET / 200 in 139ms
+ GET / 200 in 163ms
+ ○ Compiling /signup ...
+ ✓ Compiled /signup in 879ms
+ GET /signup 200 in 966ms
+ ○ Compiling /login ...
+ ✓ Compiled /login in 502ms
+ GET /login 200 in 594ms
+ GET /signup 200 in 96ms
+ GET /login 200 in 89ms
+ ○ Compiling /api/auth/signup ...
+ GET /signup 200 in 2391ms
+ GET /signup 200 in 3095ms
+ GET /signup 200 in 2197ms
+ GET /signup 200 in 3097ms
+ ✓ Compiled /api/auth/signup in 2.9s
+prisma:query INSERT INTO "public"."User" ("id","name","email","mobile","passwordHash","createdAt") VALUES ($1,$2,$3,$4,$5,$6) RETURNING "public"."User"."id", "public"."User"."name", "public"."User"."email", "public"."User"."mobile", "public"."User"."passwordHash", "public"."User"."createdAt"
+ POST /api/auth/signup 200 in 4631ms
+ GET / 200 in 360ms
+ GET /login 200 in 98ms
+ ✓ Compiled /favicon.ico in 218ms
+ GET /favicon.ico?favicon.bf3c9292.ico 200 in 495ms
+ GET / 200 in 321ms
+ GET /favicon.ico?favicon.bf3c9292.ico 200 in 262ms
+ GET /signup 200 in 100ms
+ GET /login 200 in 97ms
+ ✓ Compiled /api/auth/login in 212ms
+prisma:query SELECT 1
+prisma:query SELECT "public"."User"."id", "public"."User"."name", "public"."User"."email", "public"."User"."mobile", "public"."User"."passwordHash", "public"."User"."createdAt" FROM "public"."User" WHERE ("public"."User"."email" = $1 AND 1=1) LIMIT $2 OFFSET $3
+ POST /api/auth/login 200 in 640ms
+ ○ Compiling /dashboard ...
+ ✓ Compiled /dashboard in 1498ms
+ GET /dashboard 200 in 1702ms
+prisma:query SELECT "public"."User"."id", "public"."User"."name", "public"."User"."email", "public"."User"."mobile", "public"."User"."passwordHash", "public"."User"."createdAt" FROM "public"."User" WHERE ("public"."User"."email" = $1 AND 1=1) LIMIT $2 OFFSET $3
+ POST /api/auth/login 200 in 414ms
+ GET /dashboard 200 in 178ms
+ ○ Compiling /dashboard/create ...
+ ✓ Compiled /dashboard/create in 597ms
+ GET /dashboard/create 200 in 718ms
+ ✓ Compiled /_not-found/page in 408ms
+ GET /dashboard/create/real-estate 404 in 532ms
+ GET /dashboard/create/real-estate 404 in 186ms
+ GET /dashboard/create 200 in 395ms
+ GET /dashboard 200 in 109ms
+ ✓ Compiled /api/auth/logout in 190ms
+ POST /api/auth/logout 200 in 470ms
+ GET / 200 in 147ms
+ ✓ Compiled in 496ms
+ ✓ Compiled in 257ms
+ ✓ Compiled middleware in 2ms
+ ✓ Compiled in 191ms
+ ✓ Compiled middleware in 3ms
+ ✓ Compiled in 171ms
+ ✓ Compiled middleware in 2ms
+ ✓ Compiled middleware in 2ms
+ ✓ Compiled in 430ms
+ ✓ Compiled middleware in 3ms
+ ✓ Compiled in 181ms
+ ✓ Compiled middleware in 1ms
+ ✓ Compiled middleware in 2ms
+ ✓ Compiled middleware in 2ms
+ ✓ Compiled in 727ms
+ ✓ Compiled middleware in 1ms
+ ✓ Compiled in 381ms
+ ✓ Compiled / in 33ms
+ GET / 200 in 948ms
+ GET / 200 in 345ms
+ ✓ Compiled /login in 50ms
+ GET /login 200 in 556ms
+ GET /favicon.ico?favicon.bf3c9292.ico 200 in 325ms
+ GET / 200 in 345ms
+ GET / 200 in 332ms
+ GET / 200 in 316ms
+ GET /favicon.ico?favicon.bf3c9292.ico 200 in 263ms
+ ✓ Compiled in 199ms
+ ✓ Compiled in 245ms
+ ✓ Compiled in 230ms
+ ⨯ ./app/page.tsx:26:21
+Parsing ecmascript source code failed
+[0m [90m 24 |[39m [36mexport[39m [36mdefault[39m [36mfunction[39m [33mLandingPage[39m() {
+ [90m 25 |[39m   [36mreturn[39m (
+[31m[1m>[22m[39m[90m 26 |[39m     [33m<[39m[33mdiv[39m className[33m=[39m[37m[41m[1m\[22m[49m[39m[32m"flex flex-col min-h-screen\">[39m
+ [90m    |[39m                     [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 27 |[39m       {[90m/* Navigation */[39m}
+ [90m 28 |[39m       [33m<[39m[33mheader[39m className[33m=[39m[37m[41m[1m\[22m[49m[39m[32m"px-4 lg:px-6 h-16 flex items-center border-b bg-white sticky top-0 z-50\">[39m
+ [90m 29 |[39m         [33m<[39m[33mLink[39m className[33m=[39m[37m[41m[1m\[22m[49m[39m[32m"flex items-center justify-center\" href=\"/\">[39m[0m
+
+Unterminated string constant
+
+
+ ○ Compiling /_error ...
+ ✓ Compiled /_error in 2.6s
+ GET / 500 in 2891ms
+ GET /favicon.ico 500 in 95ms
+ ⨯ ./app/page.tsx:26:21
+Parsing ecmascript source code failed
+[0m [90m 24 |[39m [36mexport[39m [36mdefault[39m [36mfunction[39m [33mLandingPage[39m() {
+ [90m 25 |[39m   [36mreturn[39m (
+[31m[1m>[22m[39m[90m 26 |[39m     [33m<[39m[33mdiv[39m className[33m=[39m[37m[41m[1m\[22m[49m[39m[32m"flex flex-col min-h-screen\">[39m
+ [90m    |[39m                     [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 27 |[39m       {[90m/* Navigation */[39m}
+ [90m 28 |[39m       [33m<[39m[33mheader[39m className[33m=[39m[37m[41m[1m\[22m[49m[39m[32m"px-4 lg:px-6 h-16 flex items-center border-b bg-white sticky top-0 z-50\">[39m
+ [90m 29 |[39m         [33m<[39m[33mLink[39m className[33m=[39m[37m[41m[1m\[22m[49m[39m[32m"flex items-center justify-center\" href=\"/\">[39m[0m
+
+Unterminated string constant
+
+
+ GET / 500 in 131ms
+ GET /favicon.ico 500 in 61ms
+ ⨯ ./app/page.tsx:26:21
+Parsing ecmascript source code failed
+[0m [90m 24 |[39m [36mexport[39m [36mdefault[39m [36mfunction[39m [33mLandingPage[39m() {
+ [90m 25 |[39m   [36mreturn[39m (
+[31m[1m>[22m[39m[90m 26 |[39m     [33m<[39m[33mdiv[39m className[33m=[39m[37m[41m[1m\[22m[49m[39m[32m"flex flex-col min-h-screen\">[39m
+ [90m    |[39m                     [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 27 |[39m       {[90m/* Navigation */[39m}
+ [90m 28 |[39m       [33m<[39m[33mheader[39m className[33m=[39m[37m[41m[1m\[22m[49m[39m[32m"px-4 lg:px-6 h-16 flex items-center border-b bg-white sticky top-0 z-50\">[39m
+ [90m 29 |[39m         [33m<[39m[33mLink[39m className[33m=[39m[37m[41m[1m\[22m[49m[39m[32m"flex items-center justify-center\" href=\"/\">[39m[0m
+
+Unterminated string constant
+
+
+ GET / 500 in 149ms
+ GET /favicon.ico 500 in 75ms
+ ✓ Compiled /signup in 45ms
+ GET /signup 200 in 228ms
+ ✓ Compiled in 178ms
+ ✓ Compiled / in 36ms
+ GET / 200 in 1084ms
+ GET / 200 in 315ms
+ GET / 200 in 348ms
+ GET /favicon.ico?favicon.bf3c9292.ico 200 in 269ms
+ GET /favicon.ico?favicon.bf3c9292.ico 200 in 276ms
+ GET / 200 in 347ms
+ GET /favicon.ico?favicon.bf3c9292.ico 200 in 271ms
+ GET /signup 200 in 95ms
+ ✓ Compiled /login in 51ms
+ GET /login 200 in 292ms
+ GET /login 200 in 103ms
+prisma:query SELECT "public"."User"."id", "public"."User"."name", "public"."User"."email", "public"."User"."mobile", "public"."User"."passwordHash", "public"."User"."createdAt" FROM "public"."User" WHERE ("public"."User"."email" = $1 AND 1=1) LIMIT $2 OFFSET $3
+ POST /api/auth/login 200 in 564ms
+ ✓ Compiled /dashboard in 47ms
+prisma:query SELECT "public"."Agreement"."id", "public"."Agreement"."userId", "public"."Agreement"."templateId", "public"."Agreement"."status", "public"."Agreement"."formData", "public"."Agreement"."isLocked", "public"."Agreement"."createdAt", "public"."Agreement"."updatedAt" FROM "public"."Agreement" WHERE "public"."Agreement"."userId" = $1 ORDER BY "public"."Agreement"."createdAt" DESC OFFSET $2
+ GET /dashboard 200 in 353ms
+ ✓ Compiled /dashboard/create in 35ms
+ GET /dashboard/create 200 in 318ms
+ ○ Compiling /dashboard/create/[categoryId] ...
+ ✓ Compiled /dashboard/create/[categoryId] in 990ms
+prisma:query SELECT 1
+prisma:query SELECT "public"."Template"."id", "public"."Template"."title", "public"."Template"."description", "public"."Template"."price", "public"."Template"."requirementsText", "public"."Template"."formSchemaJson" FROM "public"."Template" WHERE 1=1 OFFSET $1
+Error: Route "/dashboard/create/[categoryId]" used `params.categoryId`. `params` should be awaited before using its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+    at CategoryTemplatesPage (app/dashboard/create/[categoryId]/page.tsx:19:65)
+  17 |         </Button>
+  18 |         <div>
+> 19 |           <h2 className="text-2xl font-bold capitalize">{params.categoryId.replace('-', ' ')} Templates</h2>
+     |                                                                 ^
+  20 |           <p className="text-gray-500">Select a template to start generating your agreement.</p>
+  21 |         </div>
+  22 |       </div>
+ GET /dashboard/create/business 200 in 2067ms
+ GET /dashboard/create 200 in 169ms
+prisma:query SELECT 1
+prisma:query SELECT "public"."Template"."id", "public"."Template"."title", "public"."Template"."description", "public"."Template"."price", "public"."Template"."requirementsText", "public"."Template"."formSchemaJson" FROM "public"."Template" WHERE 1=1 OFFSET $1
+Error: Route "/dashboard/create/[categoryId]" used `params.categoryId`. `params` should be awaited before using its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+    at CategoryTemplatesPage (app/dashboard/create/[categoryId]/page.tsx:19:65)
+  17 |         </Button>
+  18 |         <div>
+> 19 |           <h2 className="text-2xl font-bold capitalize">{params.categoryId.replace('-', ' ')} Templates</h2>
+     |                                                                 ^
+  20 |           <p className="text-gray-500">Select a template to start generating your agreement.</p>
+  21 |         </div>
+  22 |       </div>
+ GET /dashboard/create/real-estate 200 in 204ms
+ ○ Compiling /dashboard/create/template/[templateId] ...
+ ✓ Compiled /dashboard/create/template/[templateId] in 790ms
+Error: Route "/dashboard/create/template/[templateId]" used `params.templateId`. `params` should be awaited before using its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+    at TemplateSelectionPage (app/dashboard/create/template/[templateId]/page.tsx:14:25)
+  12 |
+  13 |   const template = await prisma.template.findUnique({
+> 14 |     where: { id: params.templateId }
+     |                         ^
+  15 |   });
+  16 |
+  17 |   if (!template) redirect("/dashboard/create");
+prisma:query SELECT "public"."Template"."id", "public"."Template"."title", "public"."Template"."description", "public"."Template"."price", "public"."Template"."requirementsText", "public"."Template"."formSchemaJson" FROM "public"."Template" WHERE ("public"."Template"."id" = $1 AND 1=1) LIMIT $2 OFFSET $3
+ GET /dashboard/create/template/cmjv1uosm0000nzb838s0kvuy 200 in 1704ms
+ ✓ Compiled /api/agreements/create in 254ms
+prisma:query SELECT 1
+Error [PrismaClientValidationError]: 
+Invalid `__TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$db$2e$ts__$5b$app$2d$route$5d$__$28$ecmascript$29$__["prisma"].agreement.create()` invocation in
+/home/code/legal-master/.next/server/chunks/[root-of-the-server]__69b181ab._.js:180:157
+
+  177 const templateId = searchParams.get("templateId");
+  178 const mode = searchParams.get("mode");
+  179 if (!templateId || !mode) (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$components$2f$navigation$2e$react$2d$server$2e$js__$5b$app$2d$route$5d$__$28$ecmascript$29$__["redirect"])("/dashboard/create");
+→ 180 const agreement = await __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$db$2e$ts__$5b$app$2d$route$5d$__$28$ecmascript$29$__["prisma"].agreement.create({
+        data: {
+          userId: "cmjv18w490000nzw21blyrkrv",
+          templateId: "cmjv1uosm0000nzb838s0kvuy",
+          inviteMode: false,
+          ~~~~~~~~~~
+          inviteToken: null,
+          formData: {},
+          status: "Draft",
+      ?   id?: String,
+      ?   isLocked?: Boolean,
+      ?   createdAt?: DateTime,
+      ?   updatedAt?: DateTime
+        }
+      })
+
+Unknown argument `inviteMode`. Available options are marked with ?.
+    at <unknown> (app/api/agreements/create/route.ts:16:44)
+    at async GET (app/api/agreements/create/route.ts:16:21)
+  14 |   if (!templateId || !mode) redirect("/dashboard/create");
+  15 |
+> 16 |   const agreement = await prisma.agreement.create({
+     |                                            ^
+  17 |     data: {
+  18 |       userId: session.user.id,
+  19 |       templateId: templateId, {
+  clientVersion: '6.2.1'
+}
+ GET /api/agreements/create?templateId=cmjv1uosm0000nzb838s0kvuy&mode=self 500 in 785ms
+Error: Route "/dashboard/create/template/[templateId]" used `params.templateId`. `params` should be awaited before using its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+    at TemplateSelectionPage (app/dashboard/create/template/[templateId]/page.tsx:14:25)
+  12 |
+  13 |   const template = await prisma.template.findUnique({
+> 14 |     where: { id: params.templateId }
+     |                         ^
+  15 |   });
+  16 |
+  17 |   if (!template) redirect("/dashboard/create");
+prisma:query SELECT "public"."Template"."id", "public"."Template"."title", "public"."Template"."description", "public"."Template"."price", "public"."Template"."requirementsText", "public"."Template"."formSchemaJson" FROM "public"."Template" WHERE ("public"."Template"."id" = $1 AND 1=1) LIMIT $2 OFFSET $3
+ GET /dashboard/create/template/cmjv1uosm0000nzb838s0kvuy 200 in 765ms
+Error [PrismaClientValidationError]: 
+Invalid `__TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$db$2e$ts__$5b$app$2d$route$5d$__$28$ecmascript$29$__["prisma"].agreement.create()` invocation in
+/home/code/legal-master/.next/server/chunks/[root-of-the-server]__69b181ab._.js:180:157
+
+  177 const templateId = searchParams.get("templateId");
+  178 const mode = searchParams.get("mode");
+  179 if (!templateId || !mode) (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$components$2f$navigation$2e$react$2d$server$2e$js__$5b$app$2d$route$5d$__$28$ecmascript$29$__["redirect"])("/dashboard/create");
+→ 180 const agreement = await __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$db$2e$ts__$5b$app$2d$route$5d$__$28$ecmascript$29$__["prisma"].agreement.create({
+        data: {
+          userId: "cmjv18w490000nzw21blyrkrv",
+          templateId: "cmjv1uosm0000nzb838s0kvuy",
+          inviteMode: false,
+          ~~~~~~~~~~
+          inviteToken: null,
+          formData: {},
+          status: "Draft",
+      ?   id?: String,
+      ?   isLocked?: Boolean,
+      ?   createdAt?: DateTime,
+      ?   updatedAt?: DateTime
+        }
+      })
+
+Unknown argument `inviteMode`. Available options are marked with ?.
+    at <unknown> (app/api/agreements/create/route.ts:16:44)
+    at async GET (app/api/agreements/create/route.ts:16:21)
+  14 |   if (!templateId || !mode) redirect("/dashboard/create");
+  15 |
+> 16 |   const agreement = await prisma.agreement.create({
+     |                                            ^
+  17 |     data: {
+  18 |       userId: session.user.id,
+  19 |       templateId: templateId, {
+  clientVersion: '6.2.1'
+}
+ GET /api/agreements/create?templateId=cmjv1uosm0000nzb838s0kvuy&mode=self 500 in 481ms
+Error: Route "/dashboard/create/template/[templateId]" used `params.templateId`. `params` should be awaited before using its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+    at TemplateSelectionPage (app/dashboard/create/template/[templateId]/page.tsx:14:25)
+  12 |
+  13 |   const template = await prisma.template.findUnique({
+> 14 |     where: { id: params.templateId }
+     |                         ^
+  15 |   });
+  16 |
+  17 |   if (!template) redirect("/dashboard/create");
+prisma:query SELECT "public"."Template"."id", "public"."Template"."title", "public"."Template"."description", "public"."Template"."price", "public"."Template"."requirementsText", "public"."Template"."formSchemaJson" FROM "public"."Template" WHERE ("public"."Template"."id" = $1 AND 1=1) LIMIT $2 OFFSET $3
+ GET /dashboard/create/template/cmjv1uosm0000nzb838s0kvuy 200 in 316ms
+ GET /dashboard/create 200 in 140ms
+prisma:query SELECT 1
+prisma:query SELECT "public"."Agreement"."id", "public"."Agreement"."userId", "public"."Agreement"."templateId", "public"."Agreement"."status", "public"."Agreement"."formData", "public"."Agreement"."isLocked", "public"."Agreement"."createdAt", "public"."Agreement"."updatedAt" FROM "public"."Agreement" WHERE "public"."Agreement"."userId" = $1 ORDER BY "public"."Agreement"."createdAt" DESC OFFSET $2
+ GET /dashboard 200 in 124ms
+ GET /signup 200 in 134ms
+ GET / 200 in 209ms
+ GET / 200 in 247ms
+ GET / 200 in 251ms
+ ✓ Compiled /_not-found/page in 40ms
+ GET /dashboard/settings 404 in 216ms
+ GET /dashboard/settings 404 in 302ms
+prisma:query SELECT "public"."Agreement"."id", "public"."Agreement"."userId", "public"."Agreement"."templateId", "public"."Agreement"."status", "public"."Agreement"."formData", "public"."Agreement"."isLocked", "public"."Agreement"."createdAt", "public"."Agreement"."updatedAt" FROM "public"."Agreement" WHERE "public"."Agreement"."userId" = $1 ORDER BY "public"."Agreement"."createdAt" DESC OFFSET $2
+ GET /dashboard 200 in 358ms
+Error: Cannot apply unknown utility class `border-border`. Are you using CSS modules or similar and missing `@reference`? https://tailwindcss.com/docs/functions-and-directives#reference-directive
+    [2m[at onInvalidCandidate (/home/code/legal-master/node_modules/tailwindcss/dist/lib.js:21:1314)][0m
+    [2m[at Te (/home/code/legal-master/node_modules/tailwindcss/dist/lib.js:16:36364)][0m
+    [2m[at /home/code/legal-master/node_modules/tailwindcss/dist/lib.js:21:355][0m
+    [2m[at Tr (/home/code/legal-master/node_modules/tailwindcss/dist/lib.js:3:1718)][0m
+    [2m[at _ (/home/code/legal-master/node_modules/tailwindcss/dist/lib.js:3:1377)][0m
+    [2m[at Se (/home/code/legal-master/node_modules/tailwindcss/dist/lib.js:21:172)][0m
+    [2m[at ln (/home/code/legal-master/node_modules/tailwindcss/dist/lib.js:38:294)][0m
+    [2m[at process.processTicksAndRejections (node:internal/process/task_queues:105:5)][0m
+    [2m[at async sn (/home/code/legal-master/node_modules/tailwindcss/dist/lib.js:38:631)][0m
+    [2m[at async Qr (/home/code/legal-master/node_modules/@tailwindcss/node/dist/index.js:10:3385)][0m
+ ✓ Compiled in 131ms
+ ✓ Compiled in 1800ms
+ ✓ Compiled in 431ms
+ ⨯ ./app/globals.css
+Error evaluating Node.js code
+CssSyntaxError: tailwindcss: /home/code/legal-master/app/globals.css:1:1: Cannot apply unknown utility class `border-border`. Are you using CSS modules or similar and missing `@reference`? https://tailwindcss.com/docs/functions-and-directives#reference-directive
+    [at Input.error (turbopack:///[project]/node_modules/postcss/lib/input.js:135:16)]
+    [at Root.error (turbopack:///[project]/node_modules/postcss/lib/node.js:146:32)]
+    [at Object.Once (/home/code/legal-master/node_modules/@tailwindcss/postcss/dist/index.js:10:6912)]
+    [at process.processTicksAndRejections (node:internal/process/task_queues:105:5)]
+    [at async LazyResult.runAsync (turbopack:///[project]/node_modules/postcss/lib/lazy-result.js:293:11)]
+    [at async transform (turbopack:///[turbopack-node]/transforms/postcss.ts:70:34)]
+    [at async run (turbopack:///[turbopack-node]/ipc/evaluate.ts:92:23)]
+
+Import trace:
+  Client Component Browser:
+    ./app/globals.css [Client Component Browser]
+    ./app/layout.tsx [Server Component]
+
+
+ GET /dashboard 500 in 118ms
+ GET /favicon.ico 500 in 64ms
+ ⨯ ./app/globals.css
+Error evaluating Node.js code
+CssSyntaxError: tailwindcss: /home/code/legal-master/app/globals.css:1:1: Cannot apply unknown utility class `border-border`. Are you using CSS modules or similar and missing `@reference`? https://tailwindcss.com/docs/functions-and-directives#reference-directive
+    [at Input.error (turbopack:///[project]/node_modules/postcss/lib/input.js:135:16)]
+    [at Root.error (turbopack:///[project]/node_modules/postcss/lib/node.js:146:32)]
+    [at Object.Once (/home/code/legal-master/node_modules/@tailwindcss/postcss/dist/index.js:10:6912)]
+    [at process.processTicksAndRejections (node:internal/process/task_queues:105:5)]
+    [at async LazyResult.runAsync (turbopack:///[project]/node_modules/postcss/lib/lazy-result.js:293:11)]
+    [at async transform (turbopack:///[turbopack-node]/transforms/postcss.ts:70:34)]
+    [at async run (turbopack:///[turbopack-node]/ipc/evaluate.ts:92:23)]
+
+Import trace:
+  Client Component Browser:
+    ./app/globals.css [Client Component Browser]
+    ./app/layout.tsx [Server Component]
+
+
+ GET / 500 in 99ms
+ GET /favicon.ico 500 in 64ms
+ ✓ Compiled in 815ms
+ ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+ ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+ ✓ Compiled / in 37ms
+ ○ Compiling /dashboard ...
+ GET / 200 in 857ms
+ ✓ Compiled /dashboard in 734ms
+ ⨯ ReferenceError: Button is not defined
+    at AppSidebar (components/app-sidebar.tsx:117:16)
+  115 |                 <p className="text-slate-400 text-xs font-medium">Unlimited documents & priority support.</p>
+  116 |               </div>
+> 117 |               <Button size="sm" className="w-full bg-white text-slate-900 hover:bg-slate-100 font-bold rounded-lg h-9">
+      |                ^
+  118 |                 Upgrade Now
+  119 |               </Button>
+  120 |             </div> {
+  digest: '3688327412'
+}
+prisma:query SELECT "public"."Agreement"."id", "public"."Agreement"."userId", "public"."Agreement"."templateId", "public"."Agreement"."status", "public"."Agreement"."formData", "public"."Agreement"."isLocked", "public"."Agreement"."createdAt", "public"."Agreement"."updatedAt" FROM "public"."Agreement" WHERE "public"."Agreement"."userId" = $1 ORDER BY "public"."Agreement"."createdAt" DESC OFFSET $2
+ ⨯ ReferenceError: Mail is not defined
+    at DashboardPage (app/dashboard/page.tsx:231:16)
+  229 |           <div className="flex gap-4">
+  230 |             <Button variant="secondary" className="h-12 px-6 rounded-xl font-bold">
+> 231 |               <Mail className="mr-2 h-5 w-5" /> Contact Support
+      |                ^
+  232 |             </Button>
+  233 |             <Button variant="outline" className="h-12 px-6 rounded-xl font-bold border-white/20 text-white hover:bg-white/10">
+  234 |               <HelpCircle className="mr-2 h-5 w-5" /> Help Center {
+  digest: '2630958649'
+}
+ GET /dashboard 500 in 1102ms
+ GET / 200 in 265ms
+ GET /favicon.ico 200 in 277ms
+ GET /favicon.ico?favicon.bf3c9292.ico 200 in 262ms
+ ✓ Compiled /login in 35ms
+ GET /login 200 in 261ms
+ ✓ Compiled /signup in 42ms
+ GET /signup 200 in 286ms
+ GET /login 200 in 178ms
+ ⨯ ReferenceError: Button is not defined
+    at AppSidebar (components/app-sidebar.tsx:117:16)
+  115 |                 <p className="text-slate-400 text-xs font-medium">Unlimited documents & priority support.</p>
+  116 |               </div>
+> 117 |               <Button size="sm" className="w-full bg-white text-slate-900 hover:bg-slate-100 font-bold rounded-lg h-9">
+      |                ^
+  118 |                 Upgrade Now
+  119 |               </Button>
+  120 |             </div> {
+  digest: '3688327412'
+}
+prisma:query SELECT 1
+prisma:query SELECT "public"."Agreement"."id", "public"."Agreement"."userId", "public"."Agreement"."templateId", "public"."Agreement"."status", "public"."Agreement"."formData", "public"."Agreement"."isLocked", "public"."Agreement"."createdAt", "public"."Agreement"."updatedAt" FROM "public"."Agreement" WHERE "public"."Agreement"."userId" = $1 ORDER BY "public"."Agreement"."createdAt" DESC OFFSET $2
+ ⨯ ReferenceError: Mail is not defined
+    at DashboardPage (app/dashboard/page.tsx:231:16)
+  229 |           <div className="flex gap-4">
+  230 |             <Button variant="secondary" className="h-12 px-6 rounded-xl font-bold">
+> 231 |               <Mail className="mr-2 h-5 w-5" /> Contact Support
+      |                ^
+  232 |             </Button>
+  233 |             <Button variant="outline" className="h-12 px-6 rounded-xl font-bold border-white/20 text-white hover:bg-white/10">
+  234 |               <HelpCircle className="mr-2 h-5 w-5" /> Help Center {
+  digest: '2630958649'
+}
+ GET /dashboard 500 in 246ms
+ GET /favicon.ico 200 in 268ms
+ GET / 200 in 300ms
+prisma:query SELECT 1
+prisma:query SELECT "public"."Agreement"."id", "public"."Agreement"."userId", "public"."Agreement"."templateId", "public"."Agreement"."status", "public"."Agreement"."formData", "public"."Agreement"."isLocked", "public"."Agreement"."createdAt", "public"."Agreement"."updatedAt" FROM "public"."Agreement" WHERE "public"."Agreement"."userId" = $1 ORDER BY "public"."Agreement"."createdAt" DESC OFFSET $2
+ ⨯ ReferenceError: Mail is not defined
+    at DashboardPage (app/dashboard/page.tsx:231:16)
+  229 |           <div className="flex gap-4">
+  230 |             <Button variant="secondary" className="h-12 px-6 rounded-xl font-bold">
+> 231 |               <Mail className="mr-2 h-5 w-5" /> Contact Support
+      |                ^
+  232 |             </Button>
+  233 |             <Button variant="outline" className="h-12 px-6 rounded-xl font-bold border-white/20 text-white hover:bg-white/10">
+  234 |               <HelpCircle className="mr-2 h-5 w-5" /> Help Center {
+  digest: '2630958649'
+}
+ GET /dashboard 200 in 135ms
+ GET /favicon.ico 200 in 278ms
+ ✓ Compiled in 283ms
+ ✓ Compiled middleware in 3ms
+ GET /login 200 in 386ms
+ GET /login 200 in 135ms
+ ✓ Compiled middleware in 2ms
+ ✓ Compiled in 310ms
+ GET /login 200 in 275ms
+ GET /login 200 in 124ms
+ ✓ Compiled middleware in 2ms
+ ✓ Compiled in 327ms
+ GET /login 200 in 238ms
+ GET /login 200 in 149ms
+ GET /login 200 in 451ms
+ ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+ ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+ ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+prisma:query SELECT "public"."Agreement"."id", "public"."Agreement"."userId", "public"."Agreement"."templateId", "public"."Agreement"."status", "public"."Agreement"."formData", "public"."Agreement"."isLocked", "public"."Agreement"."createdAt", "public"."Agreement"."updatedAt" FROM "public"."Agreement" WHERE "public"."Agreement"."userId" = $1 ORDER BY "public"."Agreement"."createdAt" DESC OFFSET $2
+ ⨯ ReferenceError: Mail is not defined
+    at DashboardPage (app/dashboard/page.tsx:231:16)
+  229 |           <div className="flex gap-4">
+  230 |             <Button variant="secondary" className="h-12 px-6 rounded-xl font-bold">
+> 231 |               <Mail className="mr-2 h-5 w-5" /> Contact Support
+      |                ^
+  232 |             </Button>
+  233 |             <Button variant="outline" className="h-12 px-6 rounded-xl font-bold border-white/20 text-white hover:bg-white/10">
+  234 |               <HelpCircle className="mr-2 h-5 w-5" /> Help Center {
+  digest: '2630958649'
+}
+ GET /dashboard 500 in 834ms
+prisma:query SELECT "public"."Agreement"."id", "public"."Agreement"."userId", "public"."Agreement"."templateId", "public"."Agreement"."status", "public"."Agreement"."formData", "public"."Agreement"."isLocked", "public"."Agreement"."createdAt", "public"."Agreement"."updatedAt" FROM "public"."Agreement" WHERE "public"."Agreement"."userId" = $1 ORDER BY "public"."Agreement"."createdAt" DESC OFFSET $2
+ ⨯ ReferenceError: Mail is not defined
+    at DashboardPage (app/dashboard/page.tsx:231:16)
+  229 |           <div className="flex gap-4">
+  230 |             <Button variant="secondary" className="h-12 px-6 rounded-xl font-bold">
+> 231 |               <Mail className="mr-2 h-5 w-5" /> Contact Support
+      |                ^
+  232 |             </Button>
+  233 |             <Button variant="outline" className="h-12 px-6 rounded-xl font-bold border-white/20 text-white hover:bg-white/10">
+  234 |               <HelpCircle className="mr-2 h-5 w-5" /> Help Center {
+  digest: '2630958649'
+}
+ GET /dashboard 200 in 293ms
+prisma:query SELECT "public"."Agreement"."id", "public"."Agreement"."userId", "public"."Agreement"."templateId", "public"."Agreement"."status", "public"."Agreement"."formData", "public"."Agreement"."isLocked", "public"."Agreement"."createdAt", "public"."Agreement"."updatedAt" FROM "public"."Agreement" WHERE "public"."Agreement"."userId" = $1 ORDER BY "public"."Agreement"."createdAt" DESC OFFSET $2
+ ⨯ ReferenceError: Mail is not defined
+    at DashboardPage (app/dashboard/page.tsx:231:16)
+  229 |           <div className="flex gap-4">
+  230 |             <Button variant="secondary" className="h-12 px-6 rounded-xl font-bold">
+> 231 |               <Mail className="mr-2 h-5 w-5" /> Contact Support
+      |                ^
+  232 |             </Button>
+  233 |             <Button variant="outline" className="h-12 px-6 rounded-xl font-bold border-white/20 text-white hover:bg-white/10">
+  234 |               <HelpCircle className="mr-2 h-5 w-5" /> Help Center {
+  digest: '2630958649'
+}
+ GET /dashboard 500 in 338ms
+prisma:query SELECT "public"."Agreement"."id", "public"."Agreement"."userId", "public"."Agreement"."templateId", "public"."Agreement"."status", "public"."Agreement"."formData", "public"."Agreement"."isLocked", "public"."Agreement"."createdAt", "public"."Agreement"."updatedAt" FROM "public"."Agreement" WHERE "public"."Agreement"."userId" = $1 ORDER BY "public"."Agreement"."createdAt" DESC OFFSET $2
+ ⨯ ReferenceError: Mail is not defined
+    at DashboardPage (app/dashboard/page.tsx:231:16)
+  229 |           <div className="flex gap-4">
+  230 |             <Button variant="secondary" className="h-12 px-6 rounded-xl font-bold">
+> 231 |               <Mail className="mr-2 h-5 w-5" /> Contact Support
+      |                ^
+  232 |             </Button>
+  233 |             <Button variant="outline" className="h-12 px-6 rounded-xl font-bold border-white/20 text-white hover:bg-white/10">
+  234 |               <HelpCircle className="mr-2 h-5 w-5" /> Help Center {
+  digest: '2630958649'
+}
+ GET /dashboard 200 in 137ms
+ GET /favicon.ico 200 in 326ms
+ GET / 200 in 145ms
+prisma:query SELECT 1
+prisma:query SELECT "public"."Agreement"."id", "public"."Agreement"."userId", "public"."Agreement"."templateId", "public"."Agreement"."status", "public"."Agreement"."formData", "public"."Agreement"."isLocked", "public"."Agreement"."createdAt", "public"."Agreement"."updatedAt" FROM "public"."Agreement" WHERE "public"."Agreement"."userId" = $1 ORDER BY "public"."Agreement"."createdAt" DESC OFFSET $2
+ ⨯ ReferenceError: Mail is not defined
+    at DashboardPage (app/dashboard/page.tsx:231:16)
+  229 |           <div className="flex gap-4">
+  230 |             <Button variant="secondary" className="h-12 px-6 rounded-xl font-bold">
+> 231 |               <Mail className="mr-2 h-5 w-5" /> Contact Support
+      |                ^
+  232 |             </Button>
+  233 |             <Button variant="outline" className="h-12 px-6 rounded-xl font-bold border-white/20 text-white hover:bg-white/10">
+  234 |               <HelpCircle className="mr-2 h-5 w-5" /> Help Center {
+  digest: '2630958649'
+}
+ GET /dashboard 500 in 295ms
+prisma:query SELECT 1
+prisma:query SELECT "public"."Agreement"."id", "public"."Agreement"."userId", "public"."Agreement"."templateId", "public"."Agreement"."status", "public"."Agreement"."formData", "public"."Agreement"."isLocked", "public"."Agreement"."createdAt", "public"."Agreement"."updatedAt" FROM "public"."Agreement" WHERE "public"."Agreement"."userId" = $1 ORDER BY "public"."Agreement"."createdAt" DESC OFFSET $2
+ ⨯ ReferenceError: Mail is not defined
+    at DashboardPage (app/dashboard/page.tsx:231:16)
+  229 |           <div className="flex gap-4">
+  230 |             <Button variant="secondary" className="h-12 px-6 rounded-xl font-bold">
+> 231 |               <Mail className="mr-2 h-5 w-5" /> Contact Support
+      |                ^
+  232 |             </Button>
+  233 |             <Button variant="outline" className="h-12 px-6 rounded-xl font-bold border-white/20 text-white hover:bg-white/10">
+  234 |               <HelpCircle className="mr-2 h-5 w-5" /> Help Center {
+  digest: '2630958649'
+}
+ GET /dashboard 500 in 284ms
+prisma:query SELECT "public"."Agreement"."id", "public"."Agreement"."userId", "public"."Agreement"."templateId", "public"."Agreement"."status", "public"."Agreement"."formData", "public"."Agreement"."isLocked", "public"."Agreement"."createdAt", "public"."Agreement"."updatedAt" FROM "public"."Agreement" WHERE "public"."Agreement"."userId" = $1 ORDER BY "public"."Agreement"."createdAt" DESC OFFSET $2
+ ⨯ ReferenceError: Mail is not defined
+    at DashboardPage (app/dashboard/page.tsx:231:16)
+  229 |           <div className="flex gap-4">
+  230 |             <Button variant="secondary" className="h-12 px-6 rounded-xl font-bold">
+> 231 |               <Mail className="mr-2 h-5 w-5" /> Contact Support
+      |                ^
+  232 |             </Button>
+  233 |             <Button variant="outline" className="h-12 px-6 rounded-xl font-bold border-white/20 text-white hover:bg-white/10">
+  234 |               <HelpCircle className="mr-2 h-5 w-5" /> Help Center {
+  digest: '2630958649'
+}
+ GET /dashboard 500 in 267ms
+ GET /favicon.ico 200 in 277ms
+ ✓ Compiled in 193ms
+ GET / 200 in 132ms
+ GET /login 200 in 193ms
+ GET / 200 in 494ms
+ ✓ Compiled /dashboard in 74ms
+prisma:query SELECT "public"."Agreement"."id", "public"."Agreement"."userId", "public"."Agreement"."templateId", "public"."Agreement"."status", "public"."Agreement"."formData", "public"."Agreement"."isLocked", "public"."Agreement"."createdAt", "public"."Agreement"."updatedAt" FROM "public"."Agreement" WHERE "public"."Agreement"."userId" = $1 ORDER BY "public"."Agreement"."createdAt" DESC OFFSET $2
+ GET /dashboard 200 in 1294ms
+ GET /favicon.ico?favicon.bf3c9292.ico 200 in 309ms
+ ○ Compiling /dashboard/settings ...
+ ✓ Compiled /dashboard/settings in 830ms
+ GET /dashboard/settings 200 in 993ms
+ GET /dashboard/settings 200 in 141ms
+ ○ Compiling /dashboard/documents ...
+ ✓ Compiled /dashboard/documents in 655ms
+prisma:query SELECT 1
+prisma:query SELECT "public"."Agreement"."id", "public"."Agreement"."userId", "public"."Agreement"."templateId", "public"."Agreement"."status", "public"."Agreement"."formData", "public"."Agreement"."isLocked", "public"."Agreement"."createdAt", "public"."Agreement"."updatedAt" FROM "public"."Agreement" WHERE "public"."Agreement"."userId" = $1 ORDER BY "public"."Agreement"."createdAt" DESC OFFSET $2
+ GET /dashboard/documents 200 in 852ms
+prisma:query SELECT "public"."Agreement"."id", "public"."Agreement"."userId", "public"."Agreement"."templateId", "public"."Agreement"."status", "public"."Agreement"."formData", "public"."Agreement"."isLocked", "public"."Agreement"."createdAt", "public"."Agreement"."updatedAt" FROM "public"."Agreement" WHERE "public"."Agreement"."userId" = $1 ORDER BY "public"."Agreement"."createdAt" DESC OFFSET $2
+ GET /dashboard 200 in 176ms
+prisma:query SELECT 1
+prisma:query SELECT "public"."Agreement"."id", "public"."Agreement"."userId", "public"."Agreement"."templateId", "public"."Agreement"."status", "public"."Agreement"."formData", "public"."Agreement"."isLocked", "public"."Agreement"."createdAt", "public"."Agreement"."updatedAt" FROM "public"."Agreement" WHERE "public"."Agreement"."userId" = $1 ORDER BY "public"."Agreement"."createdAt" DESC OFFSET $2
+ GET /dashboard 200 in 158ms
+ POST /api/auth/logout 200 in 343ms
+ GET / 200 in 139ms
+ POST /api/auth/logout 200 in 281ms
+ GET /favicon.ico?favicon.bf3c9292.ico 200 in 273ms
+ GET / 200 in 101ms
+ GET / 200 in 104ms
+ GET / 200 in 99ms
+ GET /login 200 in 129ms
+ GET / 200 in 717ms
+ GET / 200 in 850ms
+ ✓ Compiled in 262ms
+ ✓ Compiled in 128ms
+ ✓ Compiled in 286ms
+ ✓ Compiled / in 53ms
+ GET / 200 in 922ms
+ GET /favicon.ico?favicon.bf3c9292.ico 200 in 280ms
+ GET /login 200 in 123ms
+prisma:query SELECT "public"."User"."id", "public"."User"."name", "public"."User"."email", "public"."User"."mobile", "public"."User"."passwordHash", "public"."User"."createdAt" FROM "public"."User" WHERE ("public"."User"."email" = $1 AND 1=1) LIMIT $2 OFFSET $3
+ POST /api/auth/login 200 in 521ms
+prisma:query SELECT "public"."Agreement"."id", "public"."Agreement"."userId", "public"."Agreement"."templateId", "public"."Agreement"."status", "public"."Agreement"."formData", "public"."Agreement"."isLocked", "public"."Agreement"."createdAt", "public"."Agreement"."updatedAt" FROM "public"."Agreement" WHERE "public"."Agreement"."userId" = $1 ORDER BY "public"."Agreement"."createdAt" DESC OFFSET $2
+ GET /dashboard 200 in 197ms
+prisma:query SELECT "public"."Agreement"."id", "public"."Agreement"."userId", "public"."Agreement"."templateId", "public"."Agreement"."status", "public"."Agreement"."formData", "public"."Agreement"."isLocked", "public"."Agreement"."createdAt", "public"."Agreement"."updatedAt" FROM "public"."Agreement" WHERE "public"."Agreement"."userId" = $1 ORDER BY "public"."Agreement"."createdAt" DESC OFFSET $2
+ GET /dashboard 200 in 184ms
+ ✓ Compiled /dashboard/create in 59ms
+ GET /dashboard/create 200 in 335ms
+ ✓ Compiled /dashboard/create/[categoryId] in 60ms
+Error: Route "/dashboard/create/[categoryId]" used `params.categoryId`. `params` should be awaited before using its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+    at CategoryTemplatesPage (app/dashboard/create/[categoryId]/page.tsx:9:33)
+   7 | export default async function CategoryTemplatesPage({ params }: { params: { categoryId: string } }) {
+   8 |   const templates = await prisma.template.findMany({
+>  9 |     where: { categoryId: params.categoryId }
+     |                                 ^
+  10 |   });
+  11 |
+  12 |   return (
+prisma:query SELECT 1
+ ⨯ Error [PrismaClientValidationError]: 
+Invalid `__TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$db$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["prisma"].template.findMany()` invocation in
+/home/code/legal-master/.next/server/chunks/ssr/[root-of-the-server]__ba9ebfe9._.js:166:154
+
+  163 ;
+  164 ;
+  165 async function CategoryTemplatesPage({ params }) {
+→ 166     const templates = await __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$db$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["prisma"].template.findMany({
+            where: {
+              categoryId: "real-estate",
+              ~~~~~~~~~~
+          ?   AND?: TemplateWhereInput | TemplateWhereInput[],
+          ?   OR?: TemplateWhereInput[],
+          ?   NOT?: TemplateWhereInput | TemplateWhereInput[],
+          ?   id?: StringFilter | String,
+          ?   title?: StringFilter | String,
+          ?   description?: StringFilter | String,
+          ?   price?: FloatFilter | Float,
+          ?   requirementsText?: StringFilter | String,
+          ?   formSchemaJson?: JsonFilter,
+          ?   agreements?: AgreementListRelationFilter
+            }
+          })
+
+Unknown argument `categoryId`. Available options are marked with ?.
+    at <unknown> (app/dashboard/create/[categoryId]/page.tsx:8:43)
+    at async CategoryTemplatesPage (app/dashboard/create/[categoryId]/page.tsx:8:21)
+   6 |
+   7 | export default async function CategoryTemplatesPage({ params }: { params: { categoryId: string } }) {
+>  8 |   const templates = await prisma.template.findMany({
+     |                                           ^
+   9 |     where: { categoryId: params.categoryId }
+  10 |   });
+  11 | {
+  clientVersion: '6.2.1',
+  digest: '3889176875'
+}
+ GET /dashboard/create/real-estate 200 in 462ms
+ GET /favicon.ico 200 in 277ms
+ ✓ Compiled in 773ms
+ ✓ Compiled in 1388ms
+ ✓ Compiled in 120ms
+ ✓ Compiled in 161ms
+ GET / 200 in 330ms
+ ✓ Compiled /dashboard in 56ms
+prisma:query SELECT "public"."Agreement"."id", "public"."Agreement"."userId", "public"."Agreement"."templateId", "public"."Agreement"."status", "public"."Agreement"."formData", "public"."Agreement"."isLocked", "public"."Agreement"."createdAt", "public"."Agreement"."updatedAt" FROM "public"."Agreement" WHERE "public"."Agreement"."userId" = $1 ORDER BY "public"."Agreement"."createdAt" DESC OFFSET $2
+ GET /dashboard 200 in 448ms
+ ✓ Compiled /dashboard/create in 45ms
+ GET /dashboard/create 200 in 303ms
+ ✓ Compiled /dashboard/create/[categoryId] in 48ms
+Error: Route "/dashboard/create/[categoryId]" used `params.categoryId`. `params` should be awaited before using its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+    at CategoryTemplatesPage (app/dashboard/create/[categoryId]/page.tsx:9:33)
+   7 | export default async function CategoryTemplatesPage({ params }: { params: { categoryId: string } }) {
+   8 |   const templates = await prisma.template.findMany({
+>  9 |     where: { categoryId: params.categoryId }
+     |                                 ^
+  10 |   });
+  11 |
+  12 |   return (
+prisma:query SELECT 1
+ ⨯ Error [PrismaClientValidationError]: 
+Invalid `__TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$db$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["prisma"].template.findMany()` invocation in
+/home/code/legal-master/.next/server/chunks/ssr/[root-of-the-server]__ba9ebfe9._.js:166:154
+
+  163 ;
+  164 ;
+  165 async function CategoryTemplatesPage({ params }) {
+→ 166     const templates = await __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$db$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["prisma"].template.findMany({
+            where: {
+              categoryId: "real-estate",
+              ~~~~~~~~~~
+          ?   AND?: TemplateWhereInput | TemplateWhereInput[],
+          ?   OR?: TemplateWhereInput[],
+          ?   NOT?: TemplateWhereInput | TemplateWhereInput[],
+          ?   id?: StringFilter | String,
+          ?   title?: StringFilter | String,
+          ?   description?: StringFilter | String,
+          ?   price?: FloatFilter | Float,
+          ?   requirementsText?: StringFilter | String,
+          ?   formSchemaJson?: JsonFilter,
+          ?   agreements?: AgreementListRelationFilter
+            }
+          })
+
+Unknown argument `categoryId`. Available options are marked with ?.
+    at <unknown> (app/dashboard/create/[categoryId]/page.tsx:8:43)
+    at async CategoryTemplatesPage (app/dashboard/create/[categoryId]/page.tsx:8:21)
+   6 |
+   7 | export default async function CategoryTemplatesPage({ params }: { params: { categoryId: string } }) {
+>  8 |   const templates = await prisma.template.findMany({
+     |                                           ^
+   9 |     where: { categoryId: params.categoryId }
+  10 |   });
+  11 | {
+  clientVersion: '6.2.1',
+  digest: '3889176875'
+}
+ GET /dashboard/create/real-estate 200 in 405ms
+ ✓ Compiled in 349ms
+ ✓ Compiled in 277ms
+ ✓ Compiled in 448ms
+ ✓ Compiled in 245ms
+ ✓ Compiled in 268ms
+ ✓ Compiled in 130ms
+ ✓ Compiled in 268ms
+ ✓ Compiled in 275ms
+ ✓ Compiled in 275ms
+ GET /login 200 in 231ms
+ GET /login 200 in 190ms
+ ✓ Compiled in 138ms
+ GET /login 200 in 145ms
+ ✓ Compiled in 153ms
+ GET /login 200 in 125ms
+ ✓ Compiled /dashboard in 54ms
+prisma:query SELECT "public"."Agreement"."id", "public"."Agreement"."userId", "public"."Agreement"."templateId", "public"."Agreement"."status", "public"."Agreement"."formData", "public"."Agreement"."isLocked", "public"."Agreement"."createdAt", "public"."Agreement"."updatedAt" FROM "public"."Agreement" WHERE "public"."Agreement"."userId" = $1 ORDER BY "public"."Agreement"."createdAt" DESC OFFSET $2
+ GET /dashboard 200 in 1197ms
+ ✓ Compiled /dashboard/create in 59ms
+ GET /dashboard/create 200 in 369ms
+ ✓ Compiled /dashboard/create/[categoryId] in 48ms
+prisma:query SELECT 1
+ ⨯ Error [PrismaClientValidationError]: 
+Invalid `__TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$db$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["prisma"].template.findMany()` invocation in
+/home/code/legal-master/.next/server/chunks/ssr/[root-of-the-server]__ba9ebfe9._.js:168:154
+
+  165 ;
+  166 async function CategoryTemplatesPage({ params }) {
+  167     const { categoryId } = await params;
+→ 168     const templates = await __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$db$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["prisma"].template.findMany({
+            where: {
+              categoryId: "personal",
+              ~~~~~~~~~~
+          ?   AND?: TemplateWhereInput | TemplateWhereInput[],
+          ?   OR?: TemplateWhereInput[],
+          ?   NOT?: TemplateWhereInput | TemplateWhereInput[],
+          ?   id?: StringFilter | String,
+          ?   title?: StringFilter | String,
+          ?   description?: StringFilter | String,
+          ?   price?: FloatFilter | Float,
+          ?   requirementsText?: StringFilter | String,
+          ?   formSchemaJson?: JsonFilter,
+          ?   agreements?: AgreementListRelationFilter
+            }
+          })
+
+Unknown argument `categoryId`. Available options are marked with ?.
+    at <unknown> (app/dashboard/create/[categoryId]/page.tsx:10:43)
+    at async CategoryTemplatesPage (app/dashboard/create/[categoryId]/page.tsx:10:21)
+   8 |   const { categoryId } = await params;
+   9 |   
+> 10 |   const templates = await prisma.template.findMany({
+     |                                           ^
+  11 |     where: { categoryId: categoryId }
+  12 |   });
+  13 | {
+  clientVersion: '6.2.1',
+  digest: '3557037925'
+}
+ GET /dashboard/create/personal 200 in 387ms
+ GET /favicon.ico 200 in 290ms
+ GET / 200 in 790ms
+ GET / 200 in 112ms
+ GET / 200 in 286ms
+prisma:query SELECT "public"."Agreement"."id", "public"."Agreement"."userId", "public"."Agreement"."templateId", "public"."Agreement"."status", "public"."Agreement"."formData", "public"."Agreement"."isLocked", "public"."Agreement"."createdAt", "public"."Agreement"."updatedAt" FROM "public"."Agreement" WHERE "public"."Agreement"."userId" = $1 ORDER BY "public"."Agreement"."createdAt" DESC OFFSET $2
+ GET /dashboard 200 in 211ms
+ GET /dashboard/create 200 in 154ms
+ POST /api/auth/logout 200 in 281ms
+ GET / 200 in 125ms
+ GET /login 200 in 110ms
+prisma:query SELECT 1
+prisma:query SELECT "public"."User"."id", "public"."User"."name", "public"."User"."email", "public"."User"."mobile", "public"."User"."passwordHash", "public"."User"."createdAt" FROM "public"."User" WHERE ("public"."User"."email" = $1 AND 1=1) LIMIT $2 OFFSET $3
+ POST /api/auth/login 200 in 423ms
+prisma:query SELECT "public"."Agreement"."id", "public"."Agreement"."userId", "public"."Agreement"."templateId", "public"."Agreement"."status", "public"."Agreement"."formData", "public"."Agreement"."isLocked", "public"."Agreement"."createdAt", "public"."Agreement"."updatedAt" FROM "public"."Agreement" WHERE "public"."Agreement"."userId" = $1 ORDER BY "public"."Agreement"."createdAt" DESC OFFSET $2
+ GET /dashboard 200 in 203ms
+ GET /dashboard/create 200 in 176ms
