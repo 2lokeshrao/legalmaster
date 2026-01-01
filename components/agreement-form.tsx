@@ -17,7 +17,8 @@ import {
   CheckCircle2,
   Loader2,
   ArrowRight,
-  ShieldCheck
+  ShieldCheck,
+  Eye
 } from "lucide-react";
 import {
   AlertDialog,
@@ -30,11 +31,20 @@ import {
   AlertDialogTitle,
   AlertDialogTrigger,
 } from "@/components/ui/alert-dialog";
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from "@/components/ui/dialog";
 import { toast } from "sonner";
 
 export function AgreementForm({ agreement, templateSchema }: { agreement: any, templateSchema: any }) {
   const [formData, setFormData] = useState(agreement.formData || {});
   const [loading, setLoading] = useState(false);
+  const [previewContent, setPreviewContent] = useState("");
   const router = useRouter();
   const isPaid = agreement.status === "Paid";
 
@@ -80,6 +90,16 @@ export function AgreementForm({ agreement, templateSchema }: { agreement: any, t
 
   const handleDownload = () => {
     window.open(`/api/agreements/${agreement.id}/download`, "_blank");
+  };
+
+  const generatePreview = () => {
+    let content = agreement.template.content;
+    Object.entries(formData).forEach(([key, value]) => {
+      const placeholder = new RegExp(`{{${key}}}`, 'g');
+      content = content.replace(placeholder, (value as string) || `[${key}]`);
+    });
+    content = content.replace(/{{currentDate}}/g, new Date().toLocaleDateString('en-GB'));
+    setPreviewContent(content);
   };
 
   return (
@@ -154,6 +174,23 @@ export function AgreementForm({ agreement, templateSchema }: { agreement: any, t
                     {loading ? <Loader2 className="mr-2 h-5 w-5 animate-spin" /> : <Save className="mr-2 h-5 w-5" />}
                     Save Draft
                   </Button>
+
+                  <Dialog>
+                    <DialogTrigger asChild>
+                      <Button type="button" variant="secondary" onClick={generatePreview} className="flex-1 h-14 rounded-2xl font-bold border-2 border-slate-200 transition-all">
+                        <Eye className="mr-2 h-5 w-5" /> Preview Agreement
+                      </Button>
+                    </DialogTrigger>
+                    <DialogContent className="max-w-4xl max-h-[80vh] overflow-y-auto rounded-[2rem] p-10">
+                      <DialogHeader>
+                        <DialogTitle className="text-2xl font-bold">Agreement Preview</DialogTitle>
+                        <DialogDescription>This is how your final document will look with the current details.</DialogDescription>
+                      </DialogHeader>
+                      <div className="mt-8 p-8 bg-slate-50 rounded-2xl border border-slate-200 font-serif whitespace-pre-wrap text-slate-800 leading-relaxed">
+                        {previewContent}
+                      </div>
+                    </DialogContent>
+                  </Dialog>
                   
                   <AlertDialog>
                     <AlertDialogTrigger asChild>

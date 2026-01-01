@@ -13,6 +13,7 @@ model User {
   email        String      @unique
   mobile       String?
   passwordHash String
+  role         String      @default("USER") // USER, ADMIN
   createdAt    DateTime    @default(now())
   agreements   Agreement[]
 }
@@ -25,6 +26,7 @@ model Template {
   requirementsText String
   formSchemaJson   Json
   categoryId       String      @default("general")
+  content          String      @default("") // Full agreement text with placeholders
   agreements       Agreement[]
 }
 

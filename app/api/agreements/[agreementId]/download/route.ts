@@ -5,13 +5,14 @@ import { NextResponse } from "next/server";
 
 export async function GET(
   request: Request,
-  { params }: { params: { agreementId: string } }
+  { params }: { params: Promise<{ agreementId: string }> }
 ) {
+  const { agreementId } = await params;
   const session = await getSession();
   if (!session) return new Response("Unauthorized", { status: 401 });
 
   const agreement = await prisma.agreement.findUnique({
-    where: { id: params.agreementId },
+    where: { id: agreementId },
     include: { template: true }
   });
 
@@ -21,20 +22,26 @@ export async function GET(
 
   const formData = agreement.formData as any;
   const isPaid = agreement.status === "Paid";
+  let content = agreement.template.content;
 
-  // Simple HTML generation for the prototype
+  // Replace placeholders with actual data
+  Object.entries(formData).forEach(([key, value]) => {
+    const placeholder = new RegExp(`{{${key}}}`, 'g');
+    content = content.replace(placeholder, value as string);
+  });
+
+  // Add current date
+  content = content.replace(/{{currentDate}}/g, new Date().toLocaleDateString('en-GB'));
+
+  // Convert Markdown-like content to simple HTML for PDF
   const html = `
-    <h1 style="text-align: center; color: #1e3a8a;">${agreement.template.title}</h1>
-    <div style="margin-top: 40px;">
-      ${Object.entries(formData).map(([key, value]) => `
-        <div style="margin-bottom: 20px;">
-          <strong style="text-transform: capitalize;">${key.replace(/([A-Z])/g, ' $1')}:</strong>
-          <p style="margin-top: 5px;">${value}</p>
-        </div>
-      `).join('')}
-    </div>
-    <div style="margin-top: 60px;">
-      <p>This agreement is legally binding and has been executed digitally.</p>
+    <div style="font-family: 'Times New Roman', serif; color: #111;">
+      ${content.split('\n').map(line => {
+        if (line.startsWith('# ')) return `<h1 style="text-align: center; font-size: 24px; margin-bottom: 30px;">${line.substring(2)}</h1>`;
+        if (line.startsWith('**')) return `<p style="margin-bottom: 15px;"><strong>${line.replace(/\*\*/g, '')}</strong></p>`;
+        if (line.trim() === '') return '<br/>';
+        return `<p style="margin-bottom: 10px; text-align: justify;">${line}</p>`;
+      }).join('')}
     </div>
   `;
 
