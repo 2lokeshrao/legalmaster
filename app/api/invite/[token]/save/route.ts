@@ -3,10 +3,11 @@ import { NextResponse } from "next/server";
 
 export async function POST(
   request: Request,
-  { params }: { params: { token: string } }
+  { params }: { params: Promise<{ token: string }> }
 ) {
+  const { token } = await params;
   const agreement = await prisma.agreement.findUnique({
-    where: { inviteToken: params.token }
+    where: { inviteToken: token }
   });
 
   if (!agreement) {

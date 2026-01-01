@@ -4,13 +4,14 @@ import { NextResponse } from "next/server";
 
 export async function POST(
   request: Request,
-  { params }: { params: { agreementId: string } }
+  { params }: { params: Promise<{ agreementId: string }> }
 ) {
+  const { agreementId } = await params;
   const session = await getSession();
   if (!session) return new Response("Unauthorized", { status: 401 });
 
   const agreement = await prisma.agreement.findUnique({
-    where: { id: params.agreementId },
+    where: { id: agreementId },
     include: { template: true }
   });
 
@@ -32,7 +33,7 @@ export async function POST(
   }
 
   await prisma.agreement.update({
-    where: { id: params.agreementId },
+    where: { id: agreementId },
     data: {
       formData: newFormData,
     },
