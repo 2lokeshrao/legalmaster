@@ -1,0 +1,14 @@
+import { PrismaClient } from '@prisma/client'
+const prisma = new PrismaClient()
+
+async function main() {
+  const templates = await prisma.template.findMany({
+    where: { categoryId: "real-estate" }
+  })
+  console.log("Templates found:", templates.length)
+  console.log(templates)
+}
+
+main()
+  .catch(e => console.error(e))
+  .finally(async () => await prisma.$disconnect())

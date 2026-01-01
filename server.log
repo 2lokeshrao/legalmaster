@@ -918,3 +918,66 @@ Unknown argument `categoryId`. Available options are marked with ?.
  GET / 200 in 327ms
  GET / 200 in 138ms
  GET / 200 in 262ms
+ GET /login 200 in 228ms
+ GET / 200 in 138ms
+ GET /login 200 in 196ms
+ GET / 200 in 374ms
+ GET /favicon.ico?favicon.bf3c9292.ico 200 in 307ms
+ GET /login 200 in 161ms
+prisma:query SELECT "public"."User"."id", "public"."User"."name", "public"."User"."email", "public"."User"."mobile", "public"."User"."passwordHash", "public"."User"."createdAt" FROM "public"."User" WHERE ("public"."User"."email" = $1 AND 1=1) LIMIT $2 OFFSET $3
+ POST /api/auth/login 401 in 317ms
+ GET /signup 200 in 135ms
+ GET /signup 200 in 123ms
+prisma:query SELECT 1
+prisma:query INSERT INTO "public"."User" ("id","name","email","mobile","passwordHash","createdAt") VALUES ($1,$2,$3,$4,$5,$6) RETURNING "public"."User"."id", "public"."User"."name", "public"."User"."email", "public"."User"."mobile", "public"."User"."passwordHash", "public"."User"."createdAt"
+ POST /api/auth/signup 200 in 548ms
+prisma:query SELECT "public"."Agreement"."id", "public"."Agreement"."userId", "public"."Agreement"."templateId", "public"."Agreement"."status", "public"."Agreement"."formData", "public"."Agreement"."isLocked", "public"."Agreement"."createdAt", "public"."Agreement"."updatedAt" FROM "public"."Agreement" WHERE "public"."Agreement"."userId" = $1 ORDER BY "public"."Agreement"."createdAt" DESC OFFSET $2
+ GET /dashboard 200 in 252ms
+ GET /dashboard/create 200 in 167ms
+ ✓ Compiled /dashboard/documents in 80ms
+prisma:query SELECT "public"."Agreement"."id", "public"."Agreement"."userId", "public"."Agreement"."templateId", "public"."Agreement"."status", "public"."Agreement"."formData", "public"."Agreement"."isLocked", "public"."Agreement"."createdAt", "public"."Agreement"."updatedAt" FROM "public"."Agreement" WHERE "public"."Agreement"."userId" = $1 ORDER BY "public"."Agreement"."createdAt" DESC OFFSET $2
+ GET /dashboard/documents 200 in 392ms
+ GET /dashboard/create 200 in 184ms
+prisma:query SELECT 1
+ ⨯ Error [PrismaClientValidationError]: 
+Invalid `__TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$db$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["prisma"].template.findMany()` invocation in
+/home/code/legal-master/.next/server/chunks/ssr/[root-of-the-server]__ba9ebfe9._.js:168:154
+
+  165 ;
+  166 async function CategoryTemplatesPage({ params }) {
+  167     const { categoryId } = await params;
+→ 168     const templates = await __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$db$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["prisma"].template.findMany({
+            where: {
+              categoryId: "real-estate",
+              ~~~~~~~~~~
+          ?   AND?: TemplateWhereInput | TemplateWhereInput[],
+          ?   OR?: TemplateWhereInput[],
+          ?   NOT?: TemplateWhereInput | TemplateWhereInput[],
+          ?   id?: StringFilter | String,
+          ?   title?: StringFilter | String,
+          ?   description?: StringFilter | String,
+          ?   price?: FloatFilter | Float,
+          ?   requirementsText?: StringFilter | String,
+          ?   formSchemaJson?: JsonFilter,
+          ?   agreements?: AgreementListRelationFilter
+            }
+          })
+
+Unknown argument `categoryId`. Available options are marked with ?.
+    at <unknown> (app/dashboard/create/[categoryId]/page.tsx:10:43)
+    at async CategoryTemplatesPage (app/dashboard/create/[categoryId]/page.tsx:10:21)
+   8 |   const { categoryId } = await params;
+   9 |   
+> 10 |   const templates = await prisma.template.findMany({
+     |                                           ^
+  11 |     where: { categoryId: categoryId }
+  12 |   });
+  13 | {
+  clientVersion: '6.2.1',
+  digest: '260622053'
+}
+ GET /dashboard/create/real-estate 200 in 189ms
+ GET /favicon.ico 200 in 278ms
+ GET /favicon.ico 200 in 289ms
+ GET /favicon.ico 200 in 287ms
+ GET /favicon.ico 200 in 298ms
